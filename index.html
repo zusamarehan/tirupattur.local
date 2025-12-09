@@ -22,28 +22,28 @@
     </header>
 
     <!-- Location Bar -->
-<!-- Location Bar -->
+    <!-- Location Bar -->
     <div class="border-b bg-gray-100">
-      <div class="mx-auto max-w-6xl px-4 pt-2 pb-0 md:py-2 text-sm text-gray-700 flex flex-col md:flex-row md:items-center">
-        <div class="flex items-center mb-2 md:mb-0 overflow-x-auto whitespace-nowrap scrollbar-hide" style="scrollbar-width: none; -ms-overflow-style: none;">
+      <div class="mx-auto flex max-w-6xl flex-col px-4 pt-2 pb-0 text-sm text-gray-700 md:flex-row md:items-center md:py-2">
+        <div class="scrollbar-hide mb-2 flex items-center overflow-x-auto whitespace-nowrap md:mb-0" style="scrollbar-width: none; -ms-overflow-style: none;">
           <style>
             .scrollbar-hide::-webkit-scrollbar {
               display: none;
             }
           </style>
           <a href="/tirupattur" class="font-semibold text-gray-900">tirupattur</a>
-          <span class="mx-2 text-gray-400 inline">|</span>
-          <a href="/vaniyambadi" class="text-blue-600 hover:underline inline">vaniyambadi</a>
-          <span class="mx-2 text-gray-400 inline">|</span>
-          <a href="/ambur" class="text-blue-600 hover:underline inline">ambur</a>
-          <span class="mx-2 text-gray-400 inline">|</span>
-          <a href="/gudiyattam" class="text-blue-600 hover:underline inline">gudiyattam</a>
-          <span class="mx-2 text-gray-400 inline">|</span>
-          <a href="/jolarpettai" class="text-blue-600 hover:underline inline">jolarpettai</a>
+          <span class="mx-2 inline text-gray-400">|</span>
+          <a href="/vaniyambadi" class="inline text-blue-600 hover:underline">vaniyambadi</a>
+          <span class="mx-2 inline text-gray-400">|</span>
+          <a href="/ambur" class="inline text-blue-600 hover:underline">ambur</a>
+          <span class="mx-2 inline text-gray-400">|</span>
+          <a href="/gudiyattam" class="inline text-blue-600 hover:underline">gudiyattam</a>
+          <span class="mx-2 inline text-gray-400">|</span>
+          <a href="/jolarpettai" class="inline text-blue-600 hover:underline">jolarpettai</a>
         </div>
 
         <!-- Mobile Categories: scrollable -->
-        <div class="flex flex-row md:hidden overflow-x-auto pt-2" style="scrollbar-width: none; -ms-overflow-style: none;">
+        <div class="flex flex-row overflow-x-auto pt-2 md:hidden" style="scrollbar-width: none; -ms-overflow-style: none;">
           <style>
             /* Hide scrollbar for Chrome, Safari, and Opera */
             div.flex.flex-row::-webkit-scrollbar {
@@ -51,7 +51,7 @@
             }
           </style>
           <!-- Each section is treated as a horizontal card -->
-          <div class="flex-shrink-0 w-52 space-y-5">
+          <div class="w-52 flex-shrink-0 space-y-5">
             <section>
               <h2 class="mb-2 font-bold">For Sale</h2>
               <ul class="space-y-1">
@@ -62,8 +62,8 @@
               </ul>
             </section>
           </div>
-        
-          <div class="flex-shrink-0 w-52 space-y-5">
+
+          <div class="w-52 flex-shrink-0 space-y-5">
             <section>
               <h2 class="mb-2 font-bold">Jobs</h2>
               <ul class="space-y-1">
@@ -73,8 +73,8 @@
               </ul>
             </section>
           </div>
-        
-          <div class="flex-shrink-0 w-52 space-y-5">
+
+          <div class="w-52 flex-shrink-0 space-y-5">
             <section>
               <h2 class="mb-2 font-bold">Vehicles</h2>
               <ul class="space-y-1">
@@ -84,8 +84,8 @@
               </ul>
             </section>
           </div>
-        
-          <div class="flex-shrink-0 w-52 space-y-5">
+
+          <div class="w-52 flex-shrink-0 space-y-5">
             <section>
               <h2 class="mb-2 font-bold">Services</h2>
               <ul class="space-y-1">
@@ -97,8 +97,8 @@
               </ul>
             </section>
           </div>
-        
-          <div class="flex-shrink-0 w-52 space-y-5">
+
+          <div class="w-52 flex-shrink-0 space-y-5">
             <section>
               <h2 class="mb-2 font-bold">Property & Rentals</h2>
               <ul class="space-y-1">
@@ -108,8 +108,8 @@
               </ul>
             </section>
           </div>
-        
-          <div class="flex-shrink-0 w-52 space-y-5">
+
+          <div class="w-52 flex-shrink-0 space-y-5">
             <section>
               <h2 class="mb-2 font-bold">Community</h2>
               <ul class="space-y-1">
@@ -124,29 +124,33 @@
       </div>
     </div>
 
-
     <!-- Main Content: Feed + Categories -->
-    <main class="mx-auto max-w-6xl px-4 mt-4 flex flex-col md:flex-row gap-6">
+    <main class="mx-auto mt-4 flex max-w-6xl flex-col gap-6 px-4 md:flex-row">
       <!-- Left: Feed (60%) -->
-      <div class="md:w-3/5 space-y-2">
-
+      <div class="space-y-2 md:w-3/5">
         <!-- Feed cards example -->
-        <div class="bg-white p-4 rounded shadow hover:shadow-md transition">
-          <h3 class="font-semibold">iPhone 14 Pro Max - Excellent Condition</h3>
-          <p class="text-gray-600 text-xs mt-1">mobiles & gadgets • Tirupattur • 2 hours ago</p>
-        </div>
-        <div class="bg-white p-4 rounded shadow hover:shadow-md transition">
-          <h3 class="font-semibold">2 BHK Apartment for Rent</h3>
-          <p class="text-gray-600 text-xs mt-1">property & rentals • Ambur • 1 day ago</p>
-        </div>
-        <div class="bg-white p-4 rounded shadow hover:shadow-md transition">
-          <h3 class="font-semibold">Home Baker: Custom Cakes</h3>
-          <p class="text-gray-600 text-xs mt-1">services • Vaniyambadi • 3 days ago</p>
+        <div class="flex gap-4 rounded border border-gray-200 bg-white p-4 shadow transition hover:shadow-lg">
+          <!-- Content -->
+          <div class="flex-1 space-y-1">
+            <span class="rounded-full bg-blue-100 px-2 py-0.5 text-xs text-blue-700"> Mobiles & Gadgets </span>
+
+            <h3 class="text-lg font-semibold">iPhone 14 Pro Max - Excellent Condition</h3>
+
+            <p class="text-sm text-gray-600">Selling my barely used iPhone 14 Pro Max. Comes with original box and charger.</p>
+
+            <!-- Meta -->
+            <div class="flex items-center gap-2 text-xs text-gray-500">
+              <span class="flex items-center gap-1 text-green-600"> ▲ 15 </span>
+              <span class="flex items-center gap-1 text-red-600"> ▼ 1 </span>
+              <span>• Tirupattur</span>
+              <span>• 2 hours ago</span>
+            </div>
+          </div>
         </div>
       </div>
 
       <!-- Right: Categories (40%, split into two 20% columns) -->
-      <div class="md:w-2/5 grid grid-cols-2 gap-4 hidden md:grid">
+      <div class="grid hidden grid-cols-2 gap-4 md:grid md:w-2/5">
         <!-- Column 1 -->
         <div class="space-y-5">
           <section>
@@ -214,8 +218,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="mt-12 border-t bg-white sticky md:absolute bottom-0 w-full">
-      <div class="mx-auto flex max-w-6xl justify-between sticky top-0 px-4 py-4 text-xs text-gray-500">
+    <footer class="sticky bottom-0 mt-12 w-full border-t bg-white md:absolute">
+      <div class="sticky top-0 mx-auto flex max-w-6xl justify-between px-4 py-4 text-xs text-gray-500">
         <span>© tirupatur.local</span>
         <nav class="space-x-3">
           <a href="#" class="hover:underline">about</a>
@@ -227,4 +231,3 @@
     </footer>
   </body>
 </html>
-
