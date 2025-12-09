@@ -9,7 +9,7 @@
   <body class="bg-gray-50 text-sm text-gray-900">
     <!-- Header -->
     <header class="border-b bg-white">
-      <div class="mx-auto flex max-w-4xl items-center justify-between px-4 py-3">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
         <h1 class="text-lg font-bold">
           <a href="/" class="text-blue-700">tirupatur.local</a>
         </h1>
@@ -20,65 +20,155 @@
       </div>
     </header>
 
-    <!-- Location -->
     <!-- Location Bar -->
+<!-- Location Bar -->
     <div class="border-b bg-gray-100">
-        <div class="mx-auto max-w-4xl px-4 py-2 text-sm text-gray-700">
-        <span class="mr-2">📍</span>
-    
-        <a href="/tirupattur" class="font-semibold text-gray-900"> tirupattur </a>
-    
-        <span class="mx-2 text-gray-400">|</span>
-    
-        <a href="/vaniyambadi" class="text-blue-600 hover:underline"> vaniyambadi </a>
-    
-        <span class="mx-2 text-gray-400">|</span>
-    
-        <a href="/ambur" class="text-blue-600 hover:underline"> ambur </a>
-    
-        <span class="mx-2 text-gray-400">|</span>
-    
-        <a href="/gudiyattam" class="text-blue-600 hover:underline"> gudiyattam </a>
-    
-        <span class="mx-2 text-gray-400">|</span>
-    
-        <a href="/jolarpettai" class="text-blue-600 hover:underline"> jolarpettai </a>
+      <div class="mx-auto max-w-6xl px-4 pt-2 pb-0 md:py-2 text-sm text-gray-700 flex flex-col md:flex-row md:items-center">
+        <div class="flex items-center mb-2 md:mb-0">
+          
+          <a href="/tirupattur" class="font-semibold text-gray-900">tirupattur</a>
+          <span class="mx-2 text-gray-400 hidden md:inline">|</span>
+          <a href="/vaniyambadi" class="text-blue-600 hover:underline hidden md:inline">vaniyambadi</a>
+          <span class="mx-2 text-gray-400 hidden md:inline">|</span>
+          <a href="/ambur" class="text-blue-600 hover:underline hidden md:inline">ambur</a>
+          <span class="mx-2 text-gray-400 hidden md:inline">|</span>
+          <a href="/gudiyattam" class="text-blue-600 hover:underline hidden md:inline">gudiyattam</a>
+          <span class="mx-2 text-gray-400 hidden md:inline">|</span>
+          <a href="/jolarpettai" class="text-blue-600 hover:underline hidden md:inline">jolarpettai</a>
         </div>
-  </div>
-  
 
-    <!-- Categories -->
-    <main class="mx-auto max-w-4xl px-4 mt-4">
-      <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+        <!-- Mobile Categories: scrollable -->
+        <div class="flex flex-row md:hidden overflow-x-auto pt-2" style="scrollbar-width: none; -ms-overflow-style: none;">
+          <style>
+            /* Hide scrollbar for Chrome, Safari, and Opera */
+            div.flex.flex-row::-webkit-scrollbar {
+              display: none;
+            }
+          </style>
+          <!-- Each section is treated as a horizontal card -->
+          <div class="flex-shrink-0 w-64 space-y-5">
+            <section>
+              <h2 class="mb-2 font-bold">For Sale</h2>
+              <ul class="space-y-1">
+                <li><a href="#" class="text-blue-600 hover:underline">Furniture</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Electronics & Appliances</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Mobiles & Gadgets</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Books & Misc</a></li>
+              </ul>
+            </section>
+          </div>
+        
+          <div class="flex-shrink-0 w-64 space-y-5">
+            <section>
+              <h2 class="mb-2 font-bold">Jobs</h2>
+              <ul class="space-y-1">
+                <li><a href="#" class="text-blue-600 hover:underline">Full-Time Jobs</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Part-Time Jobs</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Drivers & Helpers</a></li>
+              </ul>
+            </section>
+          </div>
+        
+          <div class="flex-shrink-0 w-64 space-y-5">
+            <section>
+              <h2 class="mb-2 font-bold">Vehicles</h2>
+              <ul class="space-y-1">
+                <li><a href="#" class="text-blue-600 hover:underline">Bikes</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Cars</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Scooters</a></li>
+              </ul>
+            </section>
+          </div>
+        
+          <div class="flex-shrink-0 w-64 space-y-5">
+            <section>
+              <h2 class="mb-2 font-bold">Services</h2>
+              <ul class="space-y-1">
+                <li><a href="#" class="text-blue-600 hover:underline">Tiffin Services</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Home Bakers</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Tuition / Tutors</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Electrician / Plumber</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Developers & IT</a></li>
+              </ul>
+            </section>
+          </div>
+        
+          <div class="flex-shrink-0 w-64 space-y-5">
+            <section>
+              <h2 class="mb-2 font-bold">Property & Rentals</h2>
+              <ul class="space-y-1">
+                <li><a href="#" class="text-blue-600 hover:underline">Houses / Flats for Rent</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Rooms / PG</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Property for Sale</a></li>
+              </ul>
+            </section>
+          </div>
+        
+          <div class="flex-shrink-0 w-64 space-y-5">
+            <section>
+              <h2 class="mb-2 font-bold">Community</h2>
+              <ul class="space-y-1">
+                <li><a href="#" class="text-blue-600 hover:underline">Lost & Found</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Local Announcements</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Events</a></li>
+                <li><a href="#" class="text-blue-600 hover:underline">Help Requests</a></li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Main Content: Feed + Categories -->
+    <main class="mx-auto max-w-6xl px-4 mt-4 flex flex-col md:flex-row gap-6">
+      <!-- Left: Feed (60%) -->
+      <div class="md:w-3/5 space-y-2">
+
+        <!-- Feed cards example -->
+        <div class="bg-white p-4 rounded shadow hover:shadow-md transition">
+          <h3 class="font-semibold">iPhone 14 Pro Max - Excellent Condition</h3>
+          <p class="text-gray-600 text-xs mt-1">mobiles & gadgets • Tirupattur • 2 hours ago</p>
+        </div>
+        <div class="bg-white p-4 rounded shadow hover:shadow-md transition">
+          <h3 class="font-semibold">2 BHK Apartment for Rent</h3>
+          <p class="text-gray-600 text-xs mt-1">property & rentals • Ambur • 1 day ago</p>
+        </div>
+        <div class="bg-white p-4 rounded shadow hover:shadow-md transition">
+          <h3 class="font-semibold">Home Baker: Custom Cakes</h3>
+          <p class="text-gray-600 text-xs mt-1">services • Vaniyambadi • 3 days ago</p>
+        </div>
+      </div>
+
+      <!-- Right: Categories (40%, split into two 20% columns) -->
+      <div class="md:w-2/5 grid grid-cols-2 gap-4 hidden md:grid">
         <!-- Column 1 -->
         <div class="space-y-5">
           <section>
-            <h2 class="mb-2 font-bold">for sale</h2>
+            <h2 class="mb-2 font-bold">For Sale</h2>
             <ul class="space-y-1">
-              <li><a href="#" class="text-blue-600 hover:underline">furniture</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">electronics & appliances</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">mobiles & gadgets</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">books & misc</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Furniture</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Electronics & Appliances</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Mobiles & Gadgets</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Books & Misc</a></li>
             </ul>
           </section>
 
           <section>
-            <h2 class="mb-2 font-bold">services</h2>
+            <h2 class="mb-2 font-bold">Jobs</h2>
             <ul class="space-y-1">
-              <li><a href="#" class="text-blue-600 hover:underline">tiffin services</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">home bakers</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">tuition / tutors</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">electrician / plumber</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">developers & IT</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Full-Time Jobs</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Part-Time Jobs</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Drivers & Helpers</a></li>
             </ul>
           </section>
 
           <section>
-            <h2 class="mb-2 font-bold">jobs</h2>
+            <h2 class="mb-2 font-bold">Vehicles</h2>
             <ul class="space-y-1">
-              <li><a href="#" class="text-blue-600 hover:underline">full-time jobs</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">part-time jobs</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">drivers & helpers</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Bikes</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Cars</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Scooters</a></li>
             </ul>
           </section>
         </div>
@@ -86,30 +176,32 @@
         <!-- Column 2 -->
         <div class="space-y-5">
           <section>
-            <h2 class="mb-2 font-bold">property & rentals</h2>
+            <h2 class="mb-2 font-bold">Services</h2>
             <ul class="space-y-1">
-              <li><a href="#" class="text-blue-600 hover:underline">houses / flats for rent</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">rooms / PG</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">property for sale</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Tiffin Services</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Home Bakers</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Tuition / Tutors</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Electrician / Plumber</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Developers & IT</a></li>
             </ul>
           </section>
 
           <section>
-            <h2 class="mb-2 font-bold">vehicles</h2>
+            <h2 class="mb-2 font-bold">Property & Rentals</h2>
             <ul class="space-y-1">
-              <li><a href="#" class="text-blue-600 hover:underline">bikes</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">cars</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">scooters</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Houses / Flats for Rent</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Rooms / PG</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Property for Sale</a></li>
             </ul>
           </section>
 
           <section>
-            <h2 class="mb-2 font-bold">community</h2>
+            <h2 class="mb-2 font-bold">Community</h2>
             <ul class="space-y-1">
-              <li><a href="#" class="text-blue-600 hover:underline">lost & found</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">local announcements</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">events</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">help requests</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Lost & Found</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Local Announcements</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Events</a></li>
+              <li><a href="#" class="text-blue-600 hover:underline">Help Requests</a></li>
             </ul>
           </section>
         </div>
@@ -117,8 +209,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="mt-12 border-t bg-white">
-      <div class="mx-auto flex max-w-4xl justify-between px-4 py-4 text-xs text-gray-500">
+    <footer class="mt-12 border-t bg-white sticky md:absolute bottom-0 w-full">
+      <div class="mx-auto flex max-w-6xl justify-between sticky top-0 px-4 py-4 text-xs text-gray-500">
         <span>© tirupatur.local</span>
         <nav class="space-x-3">
           <a href="#" class="hover:underline">about</a>
@@ -130,3 +222,4 @@
     </footer>
   </body>
 </html>
+
