@@ -22,15 +22,10 @@
     </header>
 
     <!-- Location Bar -->
-    <!-- Location Bar -->
     <div class="border-b bg-gray-100">
       <div class="mx-auto flex max-w-6xl flex-col px-4 pt-2 pb-0 text-sm text-gray-700 md:flex-row md:items-center md:py-2">
-        <div class="scrollbar-hide mb-2 flex items-center overflow-x-auto whitespace-nowrap md:mb-0" style="scrollbar-width: none; -ms-overflow-style: none;">
-          <style>
-            .scrollbar-hide::-webkit-scrollbar {
-              display: none;
-            }
-          </style>
+        <!-- Desktop: horizontal city links -->
+        <div class="mb-2 hidden items-center md:mb-0 md:flex">
           <a href="/tirupattur" class="font-semibold text-gray-900">tirupattur</a>
           <span class="mx-2 inline text-gray-400">|</span>
           <a href="/vaniyambadi" class="inline text-blue-600 hover:underline">vaniyambadi</a>
@@ -42,83 +37,107 @@
           <a href="/jolarpettai" class="inline text-blue-600 hover:underline">jolarpettai</a>
         </div>
 
-        <!-- Mobile Categories: scrollable -->
-        <div class="flex flex-row overflow-x-auto pt-2 md:hidden" style="scrollbar-width: none; -ms-overflow-style: none;">
-          <style>
-            /* Hide scrollbar for Chrome, Safari, and Opera */
-            div.flex.flex-row::-webkit-scrollbar {
-              display: none;
-            }
-          </style>
-          <!-- Each section is treated as a horizontal card -->
-          <div class="w-52 flex-shrink-0 space-y-5">
-            <section>
-              <h2 class="mb-2 font-bold">For Sale</h2>
-              <ul class="space-y-1">
-                <li><a href="#" class="text-blue-600 hover:underline">Furniture</a></li>
-                <li><a href="#" class="text-blue-600 hover:underline">Electronics & Appliances</a></li>
-                <li><a href="#" class="text-blue-600 hover:underline">Mobiles & Gadgets</a></li>
-                <li><a href="#" class="text-blue-600 hover:underline">Books & Misc</a></li>
-              </ul>
-            </section>
+        <!-- Mobile: dropdown + categories button -->
+        <div class="flex items-center gap-2 pb-2 md:hidden">
+          <!-- City Dropdown -->
+          <div class="relative flex-1">
+            <select class="w-full appearance-none rounded border border-gray-300 bg-white px-3 py-2 pr-8 text-sm font-semibold text-gray-900 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500">
+              <option value="tirupattur" selected>tirupattur</option>
+              <option value="vaniyambadi">vaniyambadi</option>
+              <option value="ambur">ambur</option>
+              <option value="gudiyattam">gudiyattam</option>
+              <option value="jolarpettai">jolarpettai</option>
+            </select>
+            <!-- Dropdown arrow -->
+            <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+              <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                <path d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"/>
+              </svg>
+            </div>
           </div>
 
-          <div class="w-52 flex-shrink-0 space-y-5">
-            <section>
-              <h2 class="mb-2 font-bold">Jobs</h2>
-              <ul class="space-y-1">
-                <li><a href="#" class="text-blue-600 hover:underline">Full-Time Jobs</a></li>
-                <li><a href="#" class="text-blue-600 hover:underline">Part-Time Jobs</a></li>
-                <li><a href="#" class="text-blue-600 hover:underline">Drivers & Helpers</a></li>
-              </ul>
-            </section>
-          </div>
+          <!-- Categories Button -->
+          <button id="categoriesBtn" class="flex items-center gap-2 rounded border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-900 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500">
+            <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            Categories
+          </button>
+        </div>
 
-          <div class="w-52 flex-shrink-0 space-y-5">
-            <section>
-              <h2 class="mb-2 font-bold">Vehicles</h2>
-              <ul class="space-y-1">
-                <li><a href="#" class="text-blue-600 hover:underline">Bikes</a></li>
-                <li><a href="#" class="text-blue-600 hover:underline">Cars</a></li>
-                <li><a href="#" class="text-blue-600 hover:underline">Scooters</a></li>
-              </ul>
-            </section>
-          </div>
+        <!-- Mobile Categories Modal -->
+        <div id="categoriesModal" class="fixed inset-0 z-50 hidden bg-black bg-opacity-50 md:hidden">
+          <div class="fixed inset-x-0 bottom-0 max-h-[80vh] overflow-y-auto rounded-t-xl bg-white">
+            <!-- Modal Header -->
+            <div class="sticky top-0 flex items-center justify-between border-b bg-white px-4 py-3">
+              <h2 class="text-lg font-bold">Categories</h2>
+              <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+                <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+              </button>
+            </div>
 
-          <div class="w-52 flex-shrink-0 space-y-5">
-            <section>
-              <h2 class="mb-2 font-bold">Services</h2>
-              <ul class="space-y-1">
-                <li><a href="#" class="text-blue-600 hover:underline">Tiffin Services</a></li>
-                <li><a href="#" class="text-blue-600 hover:underline">Home Bakers</a></li>
-                <li><a href="#" class="text-blue-600 hover:underline">Tuition / Tutors</a></li>
-                <li><a href="#" class="text-blue-600 hover:underline">Electrician / Plumber</a></li>
-                <li><a href="#" class="text-blue-600 hover:underline">Developers & IT</a></li>
-              </ul>
-            </section>
-          </div>
+            <!-- Modal Content -->
+            <div class="space-y-6 p-4">
+              <section>
+                <h2 class="mb-2 font-bold">For Sale</h2>
+                <ul class="space-y-1">
+                  <li><a href="#" class="text-blue-600 hover:underline">Furniture</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Electronics & Appliances</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Mobiles & Gadgets</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Books & Misc</a></li>
+                </ul>
+              </section>
 
-          <div class="w-52 flex-shrink-0 space-y-5">
-            <section>
-              <h2 class="mb-2 font-bold">Property & Rentals</h2>
-              <ul class="space-y-1">
-                <li><a href="#" class="text-blue-600 hover:underline">Houses / Flats for Rent</a></li>
-                <li><a href="#" class="text-blue-600 hover:underline">Rooms / PG</a></li>
-                <li><a href="#" class="text-blue-600 hover:underline">Property for Sale</a></li>
-              </ul>
-            </section>
-          </div>
+              <section>
+                <h2 class="mb-2 font-bold">Jobs</h2>
+                <ul class="space-y-1">
+                  <li><a href="#" class="text-blue-600 hover:underline">Full-Time Jobs</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Part-Time Jobs</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Drivers & Helpers</a></li>
+                </ul>
+              </section>
 
-          <div class="w-52 flex-shrink-0 space-y-5">
-            <section>
-              <h2 class="mb-2 font-bold">Community</h2>
-              <ul class="space-y-1">
-                <li><a href="#" class="text-blue-600 hover:underline">Lost & Found</a></li>
-                <li><a href="#" class="text-blue-600 hover:underline">Local Announcements</a></li>
-                <li><a href="#" class="text-blue-600 hover:underline">Events</a></li>
-                <li><a href="#" class="text-blue-600 hover:underline">Help Requests</a></li>
-              </ul>
-            </section>
+              <section>
+                <h2 class="mb-2 font-bold">Vehicles</h2>
+                <ul class="space-y-1">
+                  <li><a href="#" class="text-blue-600 hover:underline">Bikes</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Cars</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Scooters</a></li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 class="mb-2 font-bold">Services</h2>
+                <ul class="space-y-1">
+                  <li><a href="#" class="text-blue-600 hover:underline">Tiffin Services</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Home Bakers</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Tuition / Tutors</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Electrician / Plumber</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Developers & IT</a></li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 class="mb-2 font-bold">Property & Rentals</h2>
+                <ul class="space-y-1">
+                  <li><a href="#" class="text-blue-600 hover:underline">Houses / Flats for Rent</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Rooms / PG</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Property for Sale</a></li>
+                </ul>
+              </section>
+
+              <section>
+                <h2 class="mb-2 font-bold">Community</h2>
+                <ul class="space-y-1">
+                  <li><a href="#" class="text-blue-600 hover:underline">Lost & Found</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Local Announcements</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Events</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Help Requests</a></li>
+                </ul>
+              </section>
+            </div>
           </div>
         </div>
       </div>
@@ -275,5 +294,30 @@
         </nav>
       </div>
     </footer>
+
+    <script>
+      // Categories modal functionality
+      const categoriesBtn = document.getElementById('categoriesBtn');
+      const categoriesModal = document.getElementById('categoriesModal');
+      const closeModal = document.getElementById('closeModal');
+
+      categoriesBtn.addEventListener('click', () => {
+        categoriesModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      });
+
+      closeModal.addEventListener('click', () => {
+        categoriesModal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      });
+
+      // Close modal when clicking outside
+      categoriesModal.addEventListener('click', (e) => {
+        if (e.target === categoriesModal) {
+          categoriesModal.classList.add('hidden');
+          document.body.style.overflow = 'auto';
+        }
+      });
+    </script>
   </body>
 </html>
