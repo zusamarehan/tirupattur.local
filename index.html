@@ -143,57 +143,56 @@
       </div>
     </div>
 
-    <!-- Main Content: Feed + Categories -->
-    <main class="mx-auto mt-4 flex max-w-6xl flex-col gap-6 px-4 md:flex-row">
+    <!-- Main Content: Feed + Categories (Twitter-style with dividers) -->
+    <main class="mx-auto flex max-w-6xl flex-col md:flex-row border-t border-gray-200">
       <!-- Left: Feed (60%) -->
-      <div class="space-y-2 md:w-3/5">
-        <div class="flex gap-2 rounded border border-gray-200 bg-white p-3 shadow transition hover:shadow-md sm:gap-4 sm:p-4 border-l-4 border-l-blue-500">
-          <!-- Content -->
-          <div class="flex-1 space-y-0.5 sm:space-y-1">
-            <!-- Label -->
-            <span class="rounded-full bg-blue-100 px-2 py-0.5 text-[10px] font-medium text-blue-700 sm:text-xs">
-              Site Announcement
-            </span>
-            <!-- Title -->
-            <h3 class="text-base font-semibold sm:text-lg">
-              Welcome to Tirupattur Local 👋
-            </h3>
-            <!-- Description -->
-            <p class="text-xs text-gray-600 sm:text-sm">
-              This platform is built for the people of <strong>Tirupattur District</strong> —
-              to buy, sell, share updates, ask for help, and support each other as a local community.
-              Whether you're offering a service, selling something, or helping someone out,
-              please keep things honest, respectful, and relevant to the district.
-            </p>
-            <!-- Guidelines -->
-            <p class="text-xs text-gray-600 sm:text-sm">
-              <strong>Community guidelines:</strong><br />
-              • Be respectful — no hate, abuse, or harassment<br />
-              • Post only genuine and legal listings<br />
-              • No scams, fake offers, or misleading information<br />
-              • Keep posts relevant to Tirupattur District and nearby areas<br />
-              • Avoid spam or repeated promotions
-            </p>
-            <!-- Approval notice -->
-            <p class="text-xs text-gray-600 sm:text-sm">
-              <strong>Post approval:</strong>
-              During the initial days, all posts will go through a manual approval process.
-              This helps us keep the platform safe and useful for everyone in Tirupattur District.
-              Approvals usually happen as quickly as possible.
-            </p>
-            <!-- Meta -->
-            <div class="flex items-center gap-1 text-[10px] text-gray-500 sm:gap-2 sm:text-xs">
-              <span class="flex items-center gap-0.5 text-blue-600 sm:gap-1">
-                📢 Community Admin
-              </span>
-              <span>• Applies to all users</span>
-              <span>• Just launched</span>
-            </div>
+      <div class="md:w-3/5 md:border-r border-gray-200 bg-white">
         
+       
+        <!-- End Announcement Card -->
+        <div class="border-b border-gray-200 p-4 bg-blue-50">
+          <!-- Header: Announcement and tags -->
+          <div class="flex items-center gap-3 mb-1">
+            <div class="flex items-center gap-1">
+              <span class="font-semibold text-base">Announcement</span>
+              <span class="text-xs ml-1">Posted 5m ago</span>
+            </div>
+            <div class="flex items-center gap-2 ml-auto">
+              <span class="inline-flex items-center gap-1 rounded-full bg-yellow-50 px-2 py-0.5 text-[11px] font-medium text-yellow-700 border border-yellow-100">
+                <!-- Speaker icon (announcement) -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-4 w-4 text-yellow-700">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0M3.124 7.5A8.969 8.969 0 0 1 5.292 3m13.416 0a8.969 8.969 0 0 1 2.168 4.5" />
+                </svg>
+
+                Announcements
+              </span>
+            </div>
           </div>
+          <!-- Content -->
+          <h3 class="font-medium text-gray-800 text-[15px] mb-1">
+            Welcome to the Tirupattur District Community Platform!
+          </h3>
+          <p class="text-sm text-gray-700 mb-3">
+            This platform is built for the people of <strong>Tirupattur District</strong> — to buy, sell, share updates, ask for help, and support each other as a local community. <br>
+            Whether you're offering a service, selling something, or helping someone out, please keep things honest, respectful, and relevant to the district.
+          </p>
+          <ul class="mb-2 mt-1 text-xs text-gray-700 pl-4 list-disc space-y-0.5">
+            <li>Be respectful — no hate, abuse, or harassment</li>
+            <li>Post only genuine and legal listings</li>
+            <li>No scams, fake offers, or misleading information</li>
+            <li>Keep posts relevant to Tirupattur District and nearby areas</li>
+            <li>Avoid spam or repeated promotions</li>
+          </ul>
+          <div class="mb-1 px-3 py-2 rounded text-gray-800 text-xs sm:text-sm bg-white border">
+            <b>Post approval:</b> During the initial days, all posts go through manual approval to keep the platform safe and useful for Tirupattur District. Approvals usually happen as quickly as possible.
+          </div>
+          <!-- Meta: Reactions, Reply -->
+          
         </div>
-        <!-- Feed card: Modern, professional, no avatar, no username, enhanced tags -->
-        <div class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition group">
+
+
+        <!-- Regular Card: Example Job Desk -->
+        <div class="border-b border-gray-200 p-4 hover:bg-gray-50 transition">
           <!-- Header: Name and enhanced contextual tags -->
           <div class="flex items-center gap-3 mb-1">
             <div class="flex items-center gap-1">
@@ -234,8 +233,9 @@
             <button class="ml-auto font-medium text-blue-600 transition hover:underline">Reply</button>
           </div>
         </div>
+  
         <!-- Feed card: Room for Rent in Vaniyambadi, example -->
-        <div class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition group">
+        <div class="border-b border-gray-200 p-4 hover:bg-gray-50 transition">
           <!-- Header: Name and enhanced contextual tags -->
           <div class="flex items-center gap-3 mb-1">
             <div class="flex items-center gap-1">
@@ -276,79 +276,82 @@
             <button class="ml-auto font-medium text-blue-600 transition hover:underline">Reply</button>
           </div>
         </div>
-        </div>
       </div>
 
       <!-- Right: Categories (40%, split into two 20% columns) -->
-      <div class="grid hidden grid-cols-2 gap-4 md:grid md:w-2/5">
-        <!-- Column 1 -->
-        <div class="space-y-5">
-          <section> 
-            <h2 class="mb-2 font-bold">For Sale</h2>
-            <ul class="space-y-1">
-              <li><a href="#" class="text-blue-600 hover:underline">Furniture</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">Electronics & Appliances</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">Mobiles & Gadgets</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">Books & Misc</a></li>
-            </ul>
-          </section>
+      <div class="hidden md:block md:w-2/5 bg-white border-r border-gray-200">
+        <div class="p-0 h-full flex flex-col">
+          <div class="flex flex-1 min-h-0 pt-6">
+            <!-- Column 1 -->
+            <div class="space-y-6 border-r border-gray-200 flex-1 flex flex-col h-full">
+              <section class="pb-6 border-b border-gray-200 px-4"> 
+                <h2 class="mb-3 font-bold text-gray-900">For Sale</h2>
+                <ul class="space-y-2">
+                  <li><a href="#" class="text-blue-600 hover:underline">Furniture</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Electronics & Appliances</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Mobiles & Gadgets</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Books & Misc</a></li>
+                </ul>
+              </section>
 
-          <section>
-            <h2 class="mb-2 font-bold">Jobs</h2>
-            <ul class="space-y-1">
-              <li><a href="#" class="text-blue-600 hover:underline">Full-Time Jobs</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">Part-Time Jobs</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">Drivers & Helpers</a></li>
-            </ul>
-          </section>
+              <section class="pb-6 border-b border-gray-200 px-4">
+                <h2 class="mb-3 font-bold text-gray-900">Jobs</h2>
+                <ul class="space-y-2">
+                  <li><a href="#" class="text-blue-600 hover:underline">Full-Time Jobs</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Part-Time Jobs</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Drivers & Helpers</a></li>
+                </ul>
+              </section>
 
-          <section>
-            <h2 class="mb-2 font-bold">Vehicles</h2>
-            <ul class="space-y-1">
-              <li><a href="#" class="text-blue-600 hover:underline">Bikes</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">Cars</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">Scooters</a></li>
-            </ul>
-          </section>
-        </div>
+              <section class="pb-6 px-4 flex-1">
+                <h2 class="mb-3 font-bold text-gray-900">Vehicles</h2>
+                <ul class="space-y-2">
+                  <li><a href="#" class="text-blue-600 hover:underline">Bikes</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Cars</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Scooters</a></li>
+                </ul>
+              </section>
+            </div>
 
-        <!-- Column 2 -->
-        <div class="space-y-5">
-          <section>
-            <h2 class="mb-2 font-bold">Services</h2>
-            <ul class="space-y-1">
-              <li><a href="#" class="text-blue-600 hover:underline">Tiffin Services</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">Home Bakers</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">Tuition / Tutors</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">Electrician / Plumber</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">Developers & IT</a></li>
-            </ul>
-          </section>
+            <!-- Column 2 -->
+            <div class="space-y-6 flex-1 flex flex-col h-full pt-6">
+              <section class="pb-6 border-b border-gray-200 px-4">
+                <h2 class="mb-3 font-bold text-gray-900">Services</h2>
+                <ul class="space-y-2">
+                  <li><a href="#" class="text-blue-600 hover:underline">Tiffin Services</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Home Bakers</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Tuition / Tutors</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Electrician / Plumber</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Developers & IT</a></li>
+                </ul>
+              </section>
 
-          <section>
-            <h2 class="mb-2 font-bold">Property & Rentals</h2>
-            <ul class="space-y-1">
-              <li><a href="#" class="text-blue-600 hover:underline">Houses / Flats for Rent</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">Rooms / PG</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">Property for Sale</a></li>
-            </ul>
-          </section>
+              <section class="pb-6 border-b border-gray-200 px-4">
+                <h2 class="mb-3 font-bold text-gray-900">Property & Rentals</h2>
+                <ul class="space-y-2">
+                  <li><a href="#" class="text-blue-600 hover:underline">Houses / Flats for Rent</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Rooms / PG</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Property for Sale</a></li>
+                </ul>
+              </section>
 
-          <section>
-            <h2 class="mb-2 font-bold">Community</h2>
-            <ul class="space-y-1">
-              <li><a href="#" class="text-blue-600 hover:underline">Lost & Found</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">Local Announcements</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">Events</a></li>
-              <li><a href="#" class="text-blue-600 hover:underline">Help Requests</a></li>
-            </ul>
-          </section>
+              <section class="pb-6 px-4 flex-1">
+                <h2 class="mb-3 font-bold text-gray-900">Community</h2>
+                <ul class="space-y-2">
+                  <li><a href="#" class="text-blue-600 hover:underline">Lost & Found</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Local Announcements</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Events</a></li>
+                  <li><a href="#" class="text-blue-600 hover:underline">Help Requests</a></li>
+                </ul>
+              </section>
+            </div>
+          </div>
         </div>
       </div>
     </main>
 
     <!-- Footer -->
-    <footer class="mt-12 w-full border-t bg-white">
+    <footer class="w-full border-t border-gray-200 bg-white">
       <div class="mx-auto flex max-w-6xl justify-between px-4 py-4 text-xs text-gray-500">
         <span>© tirupatur.local</span>
         <nav class="space-x-3">
