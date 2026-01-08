@@ -192,25 +192,90 @@
         
           </div>
         </div>
-        <!-- Feed cards example -->
-        <div class="flex gap-2 rounded border border-gray-200 bg-white p-3 shadow transition hover:shadow-lg sm:gap-4 sm:p-4">
-          <!-- Content -->
-           
-          <div class="flex-1 space-y-0.5 sm:space-y-1">
-            <span class="rounded-full bg-blue-100 px-2 py-0.5 text-[10px] text-blue-700 sm:text-xs"> Mobiles & Gadgets </span>
-
-            <h3 class="text-base font-semibold sm:text-lg">iPhone 14 Pro Max - Excellent Condition</h3>
-
-            <p class="text-xs text-gray-600 sm:text-sm">Selling my barely used iPhone 14 Pro Max. Comes with original box and charger.</p>
-
-            <!-- Meta -->
-            <div class="flex items-center gap-1 text-[10px] text-gray-500 sm:gap-2 sm:text-xs">
-              <span class="flex items-center gap-0.5 text-green-600 sm:gap-1"> ▲ 15 </span>
-              <span class="flex items-center gap-0.5 text-red-600 sm:gap-1"> ▼ 1 </span>
-              <span>• Tirupattur</span>
-              <span>• 2 hours ago</span>
+        <!-- Feed card: Modern, professional, no avatar, no username, enhanced tags -->
+        <div class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition group">
+          <!-- Header: Name and enhanced contextual tags -->
+          <div class="flex items-center gap-3 mb-1">
+            <div class="flex items-center gap-1">
+              <span class="font-semibold text-gray-900 text-base">Job Desk</span>
+              <span class="text-xs text-gray-400 ml-1">Posted 30m ago</span>
+            </div>
+            <div class="flex items-center gap-2 ml-auto">
+              <!-- Location tag -->
+              <span class="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2 py-0.5 text-[11px] font-medium text-blue-700 border border-blue-100">
+                <svg class="h-3 w-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 18a8 8 0 008-8 8 8 0 10-16 0 8 8 0 008 8zm0-9.5A1.5 1.5 0 1110 11a1.5 1.5 0 010-3z"/>
+                </svg>
+                Tirupattur
+              </span>
+              <!-- Divider for tags -->
+              <span class="text-gray-300 text-xs">›</span>
+              <!-- Job Type tag -->
+              <span class="inline-flex items-center gap-1 rounded-full bg-green-50 px-2 py-0.5 text-[11px] font-medium text-green-700 border border-green-100">
+                <svg class="h-3 w-3 text-green-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 20 20">
+                  <rect x="4" y="7" width="12" height="7" rx="3.5" stroke="currentColor" fill="none"/>
+                </svg>
+                Full Time
+              </span>
             </div>
           </div>
+          <!-- Title & Description -->
+          <h3 class="font-medium text-gray-800 text-[15px] mb-1">
+            PHP Developers Wanted - Full Time
+          </h3>
+          <p class="text-sm text-gray-600 mb-3">
+            We are hiring full-time PHP Developers for our growing team in Tirupattur...
+          </p>
+          <!-- Meta: Reactions, Reply -->
+          <div class="mt-3 flex items-center gap-3 text-xs text-gray-500">
+            <button class="flex items-center gap-1 rounded-md bg-green-50 px-2 py-1 text-green-700 transition hover:bg-green-100">▲ 8</button>
+            <button class="flex items-center gap-1 rounded-md bg-red-50 px-2 py-1 text-red-600 transition hover:bg-red-100">▼ 0</button>
+            <button class="flex items-center gap-1 rounded-md bg-blue-50 px-2 py-1 text-blue-600 transition hover:bg-blue-100">💬 3</button>
+            <button class="ml-auto font-medium text-blue-600 transition hover:underline">Reply</button>
+          </div>
+        </div>
+        <!-- Feed card: Room for Rent in Vaniyambadi, example -->
+        <div class="rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:shadow-md transition group">
+          <!-- Header: Name and enhanced contextual tags -->
+          <div class="flex items-center gap-3 mb-1">
+            <div class="flex items-center gap-1">
+              <span class="font-semibold text-gray-900 text-base">Room For Rent</span>
+              <span class="text-xs text-gray-400 ml-1">Posted 10m ago</span>
+            </div>
+            <div class="flex items-center gap-2 ml-auto">
+              <!-- Location tag -->
+              <span class="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2 py-0.5 text-[11px] font-medium text-blue-700 border border-blue-100">
+                <svg class="h-3 w-3 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M10 18a8 8 0 008-8 8 8 0 10-16 0 8 8 0 008 8zm0-9.5A1.5 1.5 0 1110 11a1.5 1.5 0 010-3z"/>
+                </svg>
+                Vaniyambadi
+              </span>
+              <!-- Divider for tags -->
+              <span class="text-gray-300 text-xs">›</span>
+              <!-- Tag: For Rent -->
+              <span class="inline-flex items-center gap-1 rounded-full bg-yellow-50 px-2 py-0.5 text-[11px] font-medium text-yellow-700 border border-yellow-100">
+                <svg class="h-3 w-3 text-yellow-500" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 20 20">
+                  <rect x="4" y="7" width="12" height="7" rx="2" stroke="currentColor" fill="none"/>
+                </svg>
+                Houses / Flats for Rent
+              </span>
+            </div>
+          </div>
+          <!-- Title & Description -->
+          <h3 class="font-medium text-gray-800 text-[15px] mb-1">
+            Spacious Room for Rent - Near Railway Station
+          </h3>
+          <p class="text-sm text-gray-600 mb-3">
+            Single room with attached bathroom available for rent in the heart of Vaniyambadi. Close to railway station and major amenities. Suitable for working professionals or students. Immediate occupancy. Contact for details!
+          </p>
+          <!-- Meta: Reactions, Reply -->
+          <div class="mt-3 flex items-center gap-3 text-xs text-gray-500">
+            <button class="flex items-center gap-1 rounded-md bg-green-50 px-2 py-1 text-green-700 transition hover:bg-green-100">▲ 2</button>
+            <button class="flex items-center gap-1 rounded-md bg-red-50 px-2 py-1 text-red-600 transition hover:bg-red-100">▼ 0</button>
+            <button class="flex items-center gap-1 rounded-md bg-blue-50 px-2 py-1 text-blue-600 transition hover:bg-blue-100">💬 1</button>
+            <button class="ml-auto font-medium text-blue-600 transition hover:underline">Reply</button>
+          </div>
+        </div>
         </div>
       </div>
 
@@ -283,8 +348,8 @@
     </main>
 
     <!-- Footer -->
-    <footer class="sticky bottom-0 mt-12 w-full border-t bg-white md:absolute">
-      <div class="sticky top-0 mx-auto flex max-w-6xl justify-between px-4 py-4 text-xs text-gray-500">
+    <footer class="mt-12 w-full border-t bg-white">
+      <div class="mx-auto flex max-w-6xl justify-between px-4 py-4 text-xs text-gray-500">
         <span>© tirupatur.local</span>
         <nav class="space-x-3">
           <a href="#" class="hover:underline">about</a>
